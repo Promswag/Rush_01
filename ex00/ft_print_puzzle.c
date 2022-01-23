@@ -6,7 +6,7 @@
 /*   By: gbaumgar <gbaumgar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 17:41:14 by gbaumgar          #+#    #+#             */
-/*   Updated: 2022/01/22 19:56:19 by gbaumgar         ###   ########.fr       */
+/*   Updated: 2022/01/23 15:40:22 by gbaumgar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_print_puzzle(int ***tab, int size)
 		while (j < size - 1)
 		{
 			k = 0;
-			while (tab[i][j][k] == 0)
+			while (tab[i][j][k] == 0 && k < 4)
 				k++;
 			ft_putchar(tab[i][j][k] + 48);
 			j++;

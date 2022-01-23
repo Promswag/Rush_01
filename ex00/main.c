@@ -6,7 +6,7 @@
 /*   By: gbaumgar <gbaumgar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 14:51:00 by gbaumgar          #+#    #+#             */
-/*   Updated: 2022/01/22 19:56:53 by gbaumgar         ###   ########.fr       */
+/*   Updated: 2022/01/23 19:14:52 by gbaumgar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdio.h>
 
 int		***ft_magic(int size);
-// void	ft_solve_puzzle(int ***tab, int size);
+int		***ft_solve_puzzle(int ***tab, int size);
 void	ft_print_puzzle(int ***tab, int size);
 
 int	main(int argc, char **argv)
@@ -64,11 +64,33 @@ int	main(int argc, char **argv)
 		i++;
 	}
 
-	tab[2][2][0] = 0;
-	tab[2][2][1] = 0;
-	tab[2][2][2] = 4;
-	tab[2][2][3] = 0;
-	// ft_solve_puzzle(tab, 6);
+
+	tab = ft_solve_puzzle(tab, 6);
 	ft_print_puzzle(tab, 6);
+
+	int	l;
+	int	m;
+	int	n;
+
+	printf("\n");
+	l = 1;
+	while (l < 5)
+	{
+		m = 1;
+		while (m < 5)
+		{
+			n = 0;
+			while (n < 4)
+			{
+				
+				printf("%d", tab[l][m][n]);
+				n++;
+			}
+			printf("\n");
+			m++;
+		}
+		printf("\n");
+		l++;
+	}
 	return (0);
 }
